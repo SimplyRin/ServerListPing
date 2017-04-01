@@ -1,0 +1,4 @@
+main: net.simplyrin.serverlistping.ServerListPing
+version: 1.0
+name: ServerListPing
+author: Rin
