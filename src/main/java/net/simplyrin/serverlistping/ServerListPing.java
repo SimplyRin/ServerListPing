@@ -2,7 +2,6 @@ package net.simplyrin.serverlistping;
 
 import java.net.InetAddress;
 
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.server.ServerListPingEvent;
@@ -10,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class ServerListPing extends JavaPlugin implements Listener {
 
-	private ServerListPing plugin;
+	private static ServerListPing plugin;
 
 	public void onEnable() {
 		plugin = this;
@@ -21,6 +20,6 @@ public class ServerListPing extends JavaPlugin implements Listener {
 	public void onPing(ServerListPingEvent event) {
 		InetAddress address = event.getAddress();
 
-		Bukkit.getServer().getConsoleSender().sendMessage("[" + address.getHostAddress() + "] <-> InitialHandler has connected");
+		plugin.getServer().getConsoleSender().sendMessage("[" + address.getHostAddress() + "] <-> InitialHandler has connected");
 	}
 }
