@@ -11,6 +11,7 @@ public class ServerListPing extends JavaPlugin implements Listener {
 
 	private static ServerListPing plugin;
 
+	@Override
 	public void onEnable() {
 		plugin = this;
 		plugin.getServer().getPluginManager().registerEvents(this, this);
