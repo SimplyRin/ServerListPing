@@ -38,6 +38,6 @@ public class ServerListPing extends JavaPlugin implements Listener {
 			return;
 		}
 
-		plugin.getServer().getConsoleSender().sendMessage("[" + address.getHostName() + "] <-> InitialHandler has connected");
+		plugin.getServer().getConsoleSender().sendMessage("[" + address.getHostName() + "|Unknown] <-> InitialHandler has connected");
 	}
 }
